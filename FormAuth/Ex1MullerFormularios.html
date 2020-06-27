@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario</title>
+</head>
+<body>
+<form method="POST" action="autenticacaoMuller.php">
+Nome: <input type="text" name="Nome"><br>
+E-mail: <input type="text" name="E-mail"><br>
+Sexo: M<input type="radio" name="Sexo" value="M"> F<input type="radio" name="Sexo" value="F"><br>
+Data de Nascimento: <input type="date" name="DataDeNascimento"><br>
+Endereço: <input type="text" name="Endereco"><br>
+Bairro: <input type="text" name="Bairro"><br>
+Estados: <select name="Estados">
+	<option value="AC">Acre</option>
+	<option value="AL">Alagoas</option>
+	<option value="AP">Amapá</option>
+	<option value="AM">Amazonas</option>
+	<option value="BA">Bahia</option>
+	<option value="CE">Ceará</option>
+	<option value="DF">Distrito Federal</option>
+	<option value="ES">Espírito Santo</option>
+	<option value="GO">Goiás</option>
+	<option value="MA">Maranhão</option>
+	<option value="MT">Mato Grosso</option>
+	<option value="MS">Mato Grosso do Sul</option>
+	<option value="MG">Minas Gerais</option>
+	<option value="PA">Pará</option>
+	<option value="PB">Paraíba</option>
+	<option value="PR">Paraná</option>
+	<option value="PE">Pernambuco</option>
+	<option value="PI">Piauí</option>
+	<option value="RJ">Rio de Janeiro</option>
+	<option value="RN">Rio Grande do Norte</option>
+	<option value="RS">Rio Grande do Sul</option>
+	<option value="RO">Rondônia</option>
+	<option value="RR">Roraima</option>
+	<option value="SC">Santa Catarina</option>
+	<option value="SP">São Paulo</option>
+	<option value="SE">Sergipe</option>
+	<option value="TO">Tocantins</option>
+</select><br>
+Cidade: <input type="text" name="cidade"><br>
+CEP: <input type="text" name="CEP"><br>
+Deseja receber e-mails?<input type="checkbox" name="ReceberEmail" value="true">
+<br><br><input type="submit">
+</form>
+
+</body>
+</html>

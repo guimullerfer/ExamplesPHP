@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ajax - Muller</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<input type="text" id="nome" onkeyup="testeUsuario()">
+<div id="alert">
+
+</div>
+<img id="imagem" src="">
+<select id="estado">
+<option>RS</option>
+<option>SC</option>
+</select>
+<select id="cidade"></select>
+</body>
+<script>
+	function testeUsuario(){
+		var palavra = $('#nome').val();
+		var flag = true;
+		$.getJSON('nomes.php',function(data){
+			$.each(data, function(){
+				if(this[0] == palavra && flag){
+					$('#alert').html('Nome ja existente');
+					$('#imagem').attr('src',this[1]);
+					flag = false;
+				}else if(flag){
+					$('#alert').html('Nome OKAY!');	
+					$('#imagem').attr('src', '');
+				}
+			});
+		});
+	};
+	$('#estado').change(function(){
+		$.getJSON('cidades.php', function(data){
+			alert(data);
+		});
+	});
+</script>
+</html>
